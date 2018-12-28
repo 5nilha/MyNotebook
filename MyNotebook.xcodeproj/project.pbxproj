@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16DB2885D6DF557E4C2D2B7E /* Pods_MyNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154D841C1DCD697B8AA44EC5 /* Pods_MyNotebook.framework */; };
+		3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06221D151F1003BB746 /* AppDelegate.swift */; };
+		3EA2E06521D151F1003BB746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06421D151F1003BB746 /* ViewController.swift */; };
+		3EA2E06821D151F1003BB746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2E06621D151F1003BB746 /* Main.storyboard */; };
+		3EA2E06B21D151F1003BB746 /* MyNotebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06921D151F1003BB746 /* MyNotebook.xcdatamodeld */; };
+		3EA2E06D21D151F6003BB746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2E06C21D151F6003BB746 /* Assets.xcassets */; };
+		3EA2E07021D151F6003BB746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2E06E21D151F6003BB746 /* LaunchScreen.storyboard */; };
+		3EA2E07B21D151F6003BB746 /* MyNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E07A21D151F6003BB746 /* MyNotebookTests.swift */; };
+		3EA2E08621D151F6003BB746 /* MyNotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E08521D151F6003BB746 /* MyNotebookUITests.swift */; };
+		3EA2E09421D153A4003BB746 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E09321D153A4003BB746 /* CanvasViewController.swift */; };
+		3EA2E09721D1542C003BB746 /* StrokeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E09621D1542C003BB746 /* StrokeGestureRecognizer.swift */; };
+		3EA2E09921D15467003BB746 /* StrokeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E09821D15467003BB746 /* StrokeCollection.swift */; };
+		3EA2E09C21D154FC003BB746 /* CGMathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E09B21D154FC003BB746 /* CGMathExtensions.swift */; };
+		3EA2E0A021D15670003BB746 /* CGDrawingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E09F21D15670003BB746 /* CGDrawingEngine.swift */; };
+		3EA2E0A321D15714003BB746 /* RingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0A221D15714003BB746 /* RingControl.swift */; };
+		3EA2E0A521D1574D003BB746 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0A421D1574D003BB746 /* RingView.swift */; };
+		3EA2E0A821D15780003BB746 /* CanvasContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0A721D15780003BB746 /* CanvasContainerView.swift */; };
+		3EA2E0AB21D199AC003BB746 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0AA21D199AC003BB746 /* NoteViewController.swift */; };
+		3EA2E0AD21D2E4C3003BB746 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0AC21D2E4C3003BB746 /* CircleView.swift */; };
+		3EA2E0AF21D31B52003BB746 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0AE21D31B52003BB746 /* NotesViewController.swift */; };
+		3EA2E0B221D31B84003BB746 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0B121D31B84003BB746 /* Note.swift */; };
+		3EA2E0B421D3518D003BB746 /* PreviewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0B321D3518D003BB746 /* PreviewNoteVC.swift */; };
+		3EA2E0B721D3E010003BB746 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0B621D3E010003BB746 /* CustomFlowLayout.swift */; };
+		3EA2E0B921D3E0B6003BB746 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E0B821D3E0B6003BB746 /* SubjectsViewController.swift */; };
+		C1BA714DB0C483804BF280D7 /* Pods_MyNotebookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA38A716697EBFFF1B2E2AE /* Pods_MyNotebookTests.framework */; };
+		C58EA60876B6A93D452BB2E8 /* Pods_MyNotebookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3D38A1A7065E9DBC778885 /* Pods_MyNotebookUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EA2E07721D151F6003BB746 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EA2E05721D151F1003BB746 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EA2E05E21D151F1003BB746;
+			remoteInfo = MyNotebook;
+		};
+		3EA2E08221D151F6003BB746 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EA2E05721D151F1003BB746 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EA2E05E21D151F1003BB746;
+			remoteInfo = MyNotebook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008A3DFE785E4AD65B353EE9 /* Pods-MyNotebookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebookTests.release.xcconfig"; path = "Target Support Files/Pods-MyNotebookTests/Pods-MyNotebookTests.release.xcconfig"; sourceTree = "<group>"; };
+		154D841C1DCD697B8AA44EC5 /* Pods_MyNotebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA38A716697EBFFF1B2E2AE /* Pods_MyNotebookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotebookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F020517CE7C95F28CA91404 /* Pods-MyNotebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebook.release.xcconfig"; path = "Target Support Files/Pods-MyNotebook/Pods-MyNotebook.release.xcconfig"; sourceTree = "<group>"; };
+		32AE595C09D5D7D1307ABC59 /* Pods-MyNotebookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebookUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyNotebookUITests/Pods-MyNotebookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3EA2E05F21D151F1003BB746 /* MyNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA2E06221D151F1003BB746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EA2E06421D151F1003BB746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EA2E06721D151F1003BB746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EA2E06A21D151F1003BB746 /* MyNotebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotebook.xcdatamodel; sourceTree = "<group>"; };
+		3EA2E06C21D151F6003BB746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EA2E06F21D151F6003BB746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EA2E07121D151F6003BB746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EA2E07621D151F6003BB746 /* MyNotebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNotebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA2E07A21D151F6003BB746 /* MyNotebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotebookTests.swift; sourceTree = "<group>"; };
+		3EA2E07C21D151F6003BB746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EA2E08121D151F6003BB746 /* MyNotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA2E08521D151F6003BB746 /* MyNotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotebookUITests.swift; sourceTree = "<group>"; };
+		3EA2E08721D151F6003BB746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EA2E09321D153A4003BB746 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		3EA2E09621D1542C003BB746 /* StrokeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeGestureRecognizer.swift; sourceTree = "<group>"; };
+		3EA2E09821D15467003BB746 /* StrokeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCollection.swift; sourceTree = "<group>"; };
+		3EA2E09B21D154FC003BB746 /* CGMathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGMathExtensions.swift; sourceTree = "<group>"; };
+		3EA2E09F21D15670003BB746 /* CGDrawingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGDrawingEngine.swift; sourceTree = "<group>"; };
+		3EA2E0A221D15714003BB746 /* RingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingControl.swift; sourceTree = "<group>"; };
+		3EA2E0A421D1574D003BB746 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		3EA2E0A721D15780003BB746 /* CanvasContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasContainerView.swift; sourceTree = "<group>"; };
+		3EA2E0AA21D199AC003BB746 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		3EA2E0AC21D2E4C3003BB746 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		3EA2E0AE21D31B52003BB746 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		3EA2E0B121D31B84003BB746 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		3EA2E0B321D3518D003BB746 /* PreviewNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewNoteVC.swift; sourceTree = "<group>"; };
+		3EA2E0B621D3E010003BB746 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		3EA2E0B821D3E0B6003BB746 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
+		5F3D38A1A7065E9DBC778885 /* Pods_MyNotebookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotebookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		661EBE37E78B21982FE34B85 /* Pods-MyNotebookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebookUITests.release.xcconfig"; path = "Target Support Files/Pods-MyNotebookUITests/Pods-MyNotebookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9E4C11B1953FFBF428269CE2 /* Pods-MyNotebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebookTests.debug.xcconfig"; path = "Target Support Files/Pods-MyNotebookTests/Pods-MyNotebookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1A7566953FFB13570B26A8 /* Pods-MyNotebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebook.debug.xcconfig"; path = "Target Support Files/Pods-MyNotebook/Pods-MyNotebook.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EA2E05C21D151F1003BB746 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DB2885D6DF557E4C2D2B7E /* Pods_MyNotebook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA2E07321D151F6003BB746 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1BA714DB0C483804BF280D7 /* Pods_MyNotebookTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA2E07E21D151F6003BB746 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58EA60876B6A93D452BB2E8 /* Pods_MyNotebookUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE6A107BB8C185306740B75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB1A7566953FFB13570B26A8 /* Pods-MyNotebook.debug.xcconfig */,
+				2F020517CE7C95F28CA91404 /* Pods-MyNotebook.release.xcconfig */,
+				9E4C11B1953FFBF428269CE2 /* Pods-MyNotebookTests.debug.xcconfig */,
+				008A3DFE785E4AD65B353EE9 /* Pods-MyNotebookTests.release.xcconfig */,
+				32AE595C09D5D7D1307ABC59 /* Pods-MyNotebookUITests.debug.xcconfig */,
+				661EBE37E78B21982FE34B85 /* Pods-MyNotebookUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3EA2E05621D151F1003BB746 = {
+			isa = PBXGroup;
+			children = (
+				3EA2E06121D151F1003BB746 /* MyNotebook */,
+				3EA2E07921D151F6003BB746 /* MyNotebookTests */,
+				3EA2E08421D151F6003BB746 /* MyNotebookUITests */,
+				3EA2E06021D151F1003BB746 /* Products */,
+				3DE6A107BB8C185306740B75 /* Pods */,
+				99CD4AE1FD3E7707AE19A5C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3EA2E06021D151F1003BB746 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E05F21D151F1003BB746 /* MyNotebook.app */,
+				3EA2E07621D151F6003BB746 /* MyNotebookTests.xctest */,
+				3EA2E08121D151F6003BB746 /* MyNotebookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EA2E06121D151F1003BB746 /* MyNotebook */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E0B521D3DFD8003BB746 /* Properties */,
+				3EA2E0A921D157C2003BB746 /* Controllers */,
+				3EA2E0A621D1576F003BB746 /* View */,
+				3EA2E09A21D154E7003BB746 /* Extensions */,
+				3EA2E09521D1540C003BB746 /* Models */,
+				3EA2E06221D151F1003BB746 /* AppDelegate.swift */,
+				3EA2E06621D151F1003BB746 /* Main.storyboard */,
+				3EA2E06C21D151F6003BB746 /* Assets.xcassets */,
+				3EA2E06E21D151F6003BB746 /* LaunchScreen.storyboard */,
+				3EA2E07121D151F6003BB746 /* Info.plist */,
+				3EA2E06921D151F1003BB746 /* MyNotebook.xcdatamodeld */,
+			);
+			path = MyNotebook;
+			sourceTree = "<group>";
+		};
+		3EA2E07921D151F6003BB746 /* MyNotebookTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E07A21D151F6003BB746 /* MyNotebookTests.swift */,
+				3EA2E07C21D151F6003BB746 /* Info.plist */,
+			);
+			path = MyNotebookTests;
+			sourceTree = "<group>";
+		};
+		3EA2E08421D151F6003BB746 /* MyNotebookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E08521D151F6003BB746 /* MyNotebookUITests.swift */,
+				3EA2E08721D151F6003BB746 /* Info.plist */,
+			);
+			path = MyNotebookUITests;
+			sourceTree = "<group>";
+		};
+		3EA2E09521D1540C003BB746 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E0B021D31B6F003BB746 /* Note */,
+				3EA2E0A121D156FC003BB746 /* RingControls */,
+				3EA2E09E21D1564F003BB746 /* Drawing Engine */,
+				3EA2E09D21D1563A003BB746 /* Stroke Model and Capture */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3EA2E09A21D154E7003BB746 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E09B21D154FC003BB746 /* CGMathExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3EA2E09D21D1563A003BB746 /* Stroke Model and Capture */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E09621D1542C003BB746 /* StrokeGestureRecognizer.swift */,
+				3EA2E09821D15467003BB746 /* StrokeCollection.swift */,
+			);
+			path = "Stroke Model and Capture";
+			sourceTree = "<group>";
+		};
+		3EA2E09E21D1564F003BB746 /* Drawing Engine */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E09F21D15670003BB746 /* CGDrawingEngine.swift */,
+			);
+			path = "Drawing Engine";
+			sourceTree = "<group>";
+		};
+		3EA2E0A121D156FC003BB746 /* RingControls */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E0A221D15714003BB746 /* RingControl.swift */,
+				3EA2E0A421D1574D003BB746 /* RingView.swift */,
+			);
+			path = RingControls;
+			sourceTree = "<group>";
+		};
+		3EA2E0A621D1576F003BB746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E0A721D15780003BB746 /* CanvasContainerView.swift */,
+				3EA2E0AC21D2E4C3003BB746 /* CircleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3EA2E0A921D157C2003BB746 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E09321D153A4003BB746 /* CanvasViewController.swift */,
+				3EA2E06421D151F1003BB746 /* ViewController.swift */,
+				3EA2E0AA21D199AC003BB746 /* NoteViewController.swift */,
+				3EA2E0AE21D31B52003BB746 /* NotesViewController.swift */,
+				3EA2E0B321D3518D003BB746 /* PreviewNoteVC.swift */,
+				3EA2E0B821D3E0B6003BB746 /* SubjectsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EA2E0B021D31B6F003BB746 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E0B121D31B84003BB746 /* Note.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		3EA2E0B521D3DFD8003BB746 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				3EA2E0B621D3E010003BB746 /* CustomFlowLayout.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		99CD4AE1FD3E7707AE19A5C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				154D841C1DCD697B8AA44EC5 /* Pods_MyNotebook.framework */,
+				1FA38A716697EBFFF1B2E2AE /* Pods_MyNotebookTests.framework */,
+				5F3D38A1A7065E9DBC778885 /* Pods_MyNotebookUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EA2E05E21D151F1003BB746 /* MyNotebook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA2E08A21D151F6003BB746 /* Build configuration list for PBXNativeTarget "MyNotebook" */;
+			buildPhases = (
+				21377DB6D0CB6CB2D4A6F8B3 /* [CP] Check Pods Manifest.lock */,
+				3EA2E05B21D151F1003BB746 /* Sources */,
+				3EA2E05C21D151F1003BB746 /* Frameworks */,
+				3EA2E05D21D151F1003BB746 /* Resources */,
+				5850446A726A18FC1B39169A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyNotebook;
+			productName = MyNotebook;
+			productReference = 3EA2E05F21D151F1003BB746 /* MyNotebook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EA2E07521D151F6003BB746 /* MyNotebookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA2E08D21D151F6003BB746 /* Build configuration list for PBXNativeTarget "MyNotebookTests" */;
+			buildPhases = (
+				ACFEA0BA4AEFB88A6836D9F9 /* [CP] Check Pods Manifest.lock */,
+				3EA2E07221D151F6003BB746 /* Sources */,
+				3EA2E07321D151F6003BB746 /* Frameworks */,
+				3EA2E07421D151F6003BB746 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EA2E07821D151F6003BB746 /* PBXTargetDependency */,
+			);
+			name = MyNotebookTests;
+			productName = MyNotebookTests;
+			productReference = 3EA2E07621D151F6003BB746 /* MyNotebookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3EA2E08021D151F6003BB746 /* MyNotebookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EA2E09021D151F6003BB746 /* Build configuration list for PBXNativeTarget "MyNotebookUITests" */;
+			buildPhases = (
+				F9196CBCE2319CA1B1198C1D /* [CP] Check Pods Manifest.lock */,
+				3EA2E07D21D151F6003BB746 /* Sources */,
+				3EA2E07E21D151F6003BB746 /* Frameworks */,
+				3EA2E07F21D151F6003BB746 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EA2E08321D151F6003BB746 /* PBXTargetDependency */,
+			);
+			name = MyNotebookUITests;
+			productName = MyNotebookUITests;
+			productReference = 3EA2E08121D151F6003BB746 /* MyNotebookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EA2E05721D151F1003BB746 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Fabio Quintanilha";
+				TargetAttributes = {
+					3EA2E05E21D151F1003BB746 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3EA2E07521D151F6003BB746 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3EA2E05E21D151F1003BB746;
+					};
+					3EA2E08021D151F6003BB746 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3EA2E05E21D151F1003BB746;
+					};
+				};
+			};
+			buildConfigurationList = 3EA2E05A21D151F1003BB746 /* Build configuration list for PBXProject "MyNotebook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EA2E05621D151F1003BB746;
+			productRefGroup = 3EA2E06021D151F1003BB746 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EA2E05E21D151F1003BB746 /* MyNotebook */,
+				3EA2E07521D151F6003BB746 /* MyNotebookTests */,
+				3EA2E08021D151F6003BB746 /* MyNotebookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EA2E05D21D151F1003BB746 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA2E07021D151F6003BB746 /* LaunchScreen.storyboard in Resources */,
+				3EA2E06D21D151F6003BB746 /* Assets.xcassets in Resources */,
+				3EA2E06821D151F1003BB746 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA2E07421D151F6003BB746 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA2E07F21D151F6003BB746 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21377DB6D0CB6CB2D4A6F8B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyNotebook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5850446A726A18FC1B39169A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNotebook/Pods-MyNotebook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Sketch/Sketch.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sketch.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyNotebook/Pods-MyNotebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACFEA0BA4AEFB88A6836D9F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyNotebookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9196CBCE2319CA1B1198C1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyNotebookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EA2E05B21D151F1003BB746 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA2E0A521D1574D003BB746 /* RingView.swift in Sources */,
+				3EA2E09721D1542C003BB746 /* StrokeGestureRecognizer.swift in Sources */,
+				3EA2E09921D15467003BB746 /* StrokeCollection.swift in Sources */,
+				3EA2E09421D153A4003BB746 /* CanvasViewController.swift in Sources */,
+				3EA2E0AB21D199AC003BB746 /* NoteViewController.swift in Sources */,
+				3EA2E0B921D3E0B6003BB746 /* SubjectsViewController.swift in Sources */,
+				3EA2E0B721D3E010003BB746 /* CustomFlowLayout.swift in Sources */,
+				3EA2E0B221D31B84003BB746 /* Note.swift in Sources */,
+				3EA2E09C21D154FC003BB746 /* CGMathExtensions.swift in Sources */,
+				3EA2E0A021D15670003BB746 /* CGDrawingEngine.swift in Sources */,
+				3EA2E06521D151F1003BB746 /* ViewController.swift in Sources */,
+				3EA2E0AD21D2E4C3003BB746 /* CircleView.swift in Sources */,
+				3EA2E0A821D15780003BB746 /* CanvasContainerView.swift in Sources */,
+				3EA2E0AF21D31B52003BB746 /* NotesViewController.swift in Sources */,
+				3EA2E06B21D151F1003BB746 /* MyNotebook.xcdatamodeld in Sources */,
+				3EA2E0A321D15714003BB746 /* RingControl.swift in Sources */,
+				3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */,
+				3EA2E0B421D3518D003BB746 /* PreviewNoteVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA2E07221D151F6003BB746 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA2E07B21D151F6003BB746 /* MyNotebookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EA2E07D21D151F6003BB746 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA2E08621D151F6003BB746 /* MyNotebookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EA2E07821D151F6003BB746 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EA2E05E21D151F1003BB746 /* MyNotebook */;
+			targetProxy = 3EA2E07721D151F6003BB746 /* PBXContainerItemProxy */;
+		};
+		3EA2E08321D151F6003BB746 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EA2E05E21D151F1003BB746 /* MyNotebook */;
+			targetProxy = 3EA2E08221D151F6003BB746 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3EA2E06621D151F1003BB746 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EA2E06721D151F1003BB746 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EA2E06E21D151F6003BB746 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EA2E06F21D151F6003BB746 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EA2E08821D151F6003BB746 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EA2E08921D151F6003BB746 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EA2E08B21D151F6003BB746 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB1A7566953FFB13570B26A8 /* Pods-MyNotebook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U8M84SE4ND;
+				INFOPLIST_FILE = MyNotebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TaskHackers.MyNotebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3EA2E08C21D151F6003BB746 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F020517CE7C95F28CA91404 /* Pods-MyNotebook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U8M84SE4ND;
+				INFOPLIST_FILE = MyNotebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TaskHackers.MyNotebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		3EA2E08E21D151F6003BB746 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E4C11B1953FFBF428269CE2 /* Pods-MyNotebookTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyNotebookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TaskHackers.MyNotebookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyNotebook.app/MyNotebook";
+			};
+			name = Debug;
+		};
+		3EA2E08F21D151F6003BB746 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008A3DFE785E4AD65B353EE9 /* Pods-MyNotebookTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyNotebookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TaskHackers.MyNotebookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyNotebook.app/MyNotebook";
+			};
+			name = Release;
+		};
+		3EA2E09121D151F6003BB746 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AE595C09D5D7D1307ABC59 /* Pods-MyNotebookUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyNotebookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TaskHackers.MyNotebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyNotebook;
+			};
+			name = Debug;
+		};
+		3EA2E09221D151F6003BB746 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 661EBE37E78B21982FE34B85 /* Pods-MyNotebookUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyNotebookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TaskHackers.MyNotebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyNotebook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EA2E05A21D151F1003BB746 /* Build configuration list for PBXProject "MyNotebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA2E08821D151F6003BB746 /* Debug */,
+				3EA2E08921D151F6003BB746 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA2E08A21D151F6003BB746 /* Build configuration list for PBXNativeTarget "MyNotebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA2E08B21D151F6003BB746 /* Debug */,
+				3EA2E08C21D151F6003BB746 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA2E08D21D151F6003BB746 /* Build configuration list for PBXNativeTarget "MyNotebookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA2E08E21D151F6003BB746 /* Debug */,
+				3EA2E08F21D151F6003BB746 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EA2E09021D151F6003BB746 /* Build configuration list for PBXNativeTarget "MyNotebookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA2E09121D151F6003BB746 /* Debug */,
+				3EA2E09221D151F6003BB746 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3EA2E06921D151F1003BB746 /* MyNotebook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3EA2E06A21D151F1003BB746 /* MyNotebook.xcdatamodel */,
+			);
+			currentVersion = 3EA2E06A21D151F1003BB746 /* MyNotebook.xcdatamodel */;
+			path = MyNotebook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3EA2E05721D151F1003BB746 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_MyNotebook {
+  umbrella header "Pods-MyNotebook-umbrella.h"
+
+  export *
+  module * { export * }
+}
