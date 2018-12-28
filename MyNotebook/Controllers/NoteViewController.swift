@@ -33,7 +33,7 @@ class NoteViewController: UIViewController {
     var papersName = ["Blank", "Notebook", "Squared"]
     var paperSelected : UIImage?
     var note: Note!
-    
+    var page: Page!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,15 @@ class NoteViewController: UIViewController {
         self.pagesCollectionView.dataSource = self
         self.newNoteView.isHidden = true
         
-            self.sketchView.lineWidth = CGFloat(1.0)
+        self.sketchView.lineWidth = CGFloat(1.0)
+        self.createNewPage()
+    }
+    
+    func createNewPage() {
+        var newPage = Page()
+        newPage.pageNumber = note.getNumberOfPages() + 1
+        self.note.notePages[newPage.pageNumber] = newPage
+        self.page = newPage
     }
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
@@ -129,6 +137,12 @@ class NoteViewController: UIViewController {
     @IBAction func addPageButtonTapped(_ sender: UIButton) {
         takeScreenshot(view: self.backView)
         sketchView.clear()
+        
+        //Save the current Page changes
+        self.note.notePages[self.page.pageNumber] = page
+        
+        //Create a new Page
+        self.createNewPage()
     }
     
     
@@ -161,8 +175,8 @@ class NoteViewController: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        note.noteImage = image
-        note.notePages.append(image)
+        page.noteImage = image
+        self.note.notePages[self.page.pageNumber] = page
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -204,7 +218,8 @@ extension NoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             let index = indexPath.row
             
-            cell.paperStyle.image = note.notePages[index]
+            let page = note.notePages[index]
+            cell.paperStyle.image = page?.noteImage
            
             return cell
         }

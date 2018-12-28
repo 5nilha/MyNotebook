@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		16DB2885D6DF557E4C2D2B7E /* Pods_MyNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154D841C1DCD697B8AA44EC5 /* Pods_MyNotebook.framework */; };
+		3E0EA8F021D5E8D100318159 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8EF21D5E8D100318159 /* Notebook.swift */; };
+		3E0EA8F221D5EAE900318159 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */; };
+		3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F321D5F41700318159 /* CornerView.swift */; };
+		3E0EA8F721D6079000318159 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F621D6079000318159 /* Page.swift */; };
 		3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06221D151F1003BB746 /* AppDelegate.swift */; };
 		3EA2E06521D151F1003BB746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06421D151F1003BB746 /* ViewController.swift */; };
 		3EA2E06821D151F1003BB746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2E06621D151F1003BB746 /* Main.storyboard */; };
@@ -58,6 +62,10 @@
 		1FA38A716697EBFFF1B2E2AE /* Pods_MyNotebookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotebookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F020517CE7C95F28CA91404 /* Pods-MyNotebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebook.release.xcconfig"; path = "Target Support Files/Pods-MyNotebook/Pods-MyNotebook.release.xcconfig"; sourceTree = "<group>"; };
 		32AE595C09D5D7D1307ABC59 /* Pods-MyNotebookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotebookUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyNotebookUITests/Pods-MyNotebookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E0EA8EF21D5E8D100318159 /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		3E0EA8F321D5F41700318159 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		3E0EA8F621D6079000318159 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		3EA2E05F21D151F1003BB746 /* MyNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA2E06221D151F1003BB746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA2E06421D151F1003BB746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +142,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3E0EA8EE21D5E8B900318159 /* Notebook */ = {
+			isa = PBXGroup;
+			children = (
+				3E0EA8EF21D5E8D100318159 /* Notebook.swift */,
+			);
+			path = Notebook;
+			sourceTree = "<group>";
+		};
+		3E0EA8F521D6077F00318159 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				3E0EA8F621D6079000318159 /* Page.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
 		3EA2E05621D151F1003BB746 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +219,8 @@
 		3EA2E09521D1540C003BB746 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3E0EA8F521D6077F00318159 /* Page */,
+				3E0EA8EE21D5E8B900318159 /* Notebook */,
 				3EA2E0B021D31B6F003BB746 /* Note */,
 				3EA2E0A121D156FC003BB746 /* RingControls */,
 				3EA2E09E21D1564F003BB746 /* Drawing Engine */,
@@ -207,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA2E09B21D154FC003BB746 /* CGMathExtensions.swift */,
+				3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +269,7 @@
 			children = (
 				3EA2E0A721D15780003BB746 /* CanvasContainerView.swift */,
 				3EA2E0AC21D2E4C3003BB746 /* CircleView.swift */,
+				3E0EA8F321D5F41700318159 /* CornerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,8 +547,10 @@
 				3EA2E09421D153A4003BB746 /* CanvasViewController.swift in Sources */,
 				3EA2E0AB21D199AC003BB746 /* NoteViewController.swift in Sources */,
 				3EA2E0B921D3E0B6003BB746 /* SubjectsViewController.swift in Sources */,
+				3E0EA8F721D6079000318159 /* Page.swift in Sources */,
 				3EA2E0B721D3E010003BB746 /* CustomFlowLayout.swift in Sources */,
 				3EA2E0B221D31B84003BB746 /* Note.swift in Sources */,
+				3E0EA8F221D5EAE900318159 /* ViewControllerExtension.swift in Sources */,
 				3EA2E09C21D154FC003BB746 /* CGMathExtensions.swift in Sources */,
 				3EA2E0A021D15670003BB746 /* CGDrawingEngine.swift in Sources */,
 				3EA2E06521D151F1003BB746 /* ViewController.swift in Sources */,
@@ -528,6 +558,8 @@
 				3EA2E0A821D15780003BB746 /* CanvasContainerView.swift in Sources */,
 				3EA2E0AF21D31B52003BB746 /* NotesViewController.swift in Sources */,
 				3EA2E06B21D151F1003BB746 /* MyNotebook.xcdatamodeld in Sources */,
+				3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */,
+				3E0EA8F021D5E8D100318159 /* Notebook.swift in Sources */,
 				3EA2E0A321D15714003BB746 /* RingControl.swift in Sources */,
 				3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */,
 				3EA2E0B421D3518D003BB746 /* PreviewNoteVC.swift in Sources */,

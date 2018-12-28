@@ -11,16 +11,22 @@ import UIKit
 
 class Note {
     
+    var subject_uid: String = ""
+    var subject: String = ""
     var title: String = ""
     var date: Date! = Date()
-    var pageNumber: Int = 0
     var noteImage: UIImage!
-    var notePages = [UIImage]()
+    var notePages = [Int : Page]()
     
-    init (title: String, date: Date, pageNumber: Int) {
+    init (subject_uid: String, subject: String, title: String, date: Date) {
+        self.subject_uid = subject_uid
+        self.subject = subject
         self.title = title
         self.date = date
-        self.pageNumber = pageNumber
+    }
+    
+    func getNumberOfPages() -> Int {
+        return self.notePages.count
     }
     
 }

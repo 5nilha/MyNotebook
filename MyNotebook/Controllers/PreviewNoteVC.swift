@@ -18,13 +18,8 @@ class PreviewNoteVC: UIViewController {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-
-        
-        
+        print("pages: \(note.notePages.count)")
     }
-    
-
-
 }
 
 extension PreviewNoteVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -35,7 +30,10 @@ extension PreviewNoteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotePagesCollectionCell", for: indexPath) as! NotePagesCollectionCell
         
-        cell.noteImage.image = note.notePages[indexPath.row]
+        let page = note.notePages[indexPath.row + 1]
+        
+        cell.noteImage.image = page?.noteImage
+        cell.pageNumber.text = "\(page?.pageNumber ?? 0)"
         
         return cell
     }
@@ -46,6 +44,7 @@ extension PreviewNoteVC: UICollectionViewDelegate, UICollectionViewDataSource {
 class NotePagesCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var noteImage: UIImageView!
+    @IBOutlet weak var pageNumber: UILabel!
     
     
 }
