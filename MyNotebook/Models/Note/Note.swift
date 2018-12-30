@@ -11,22 +11,24 @@ import UIKit
 
 class Note {
     
-    var subject_uid: String = ""
-    var subject: String = ""
+    var noteObject: Notes!
     var title: String = ""
-    var date: Date! = Date()
+    var created_at: Date! = Date()
     var noteImage: UIImage!
-    var notePages = [Int : Page]()
+    var notePages = [Int32 : Page]()
     
-    init (subject_uid: String, subject: String, title: String, date: Date) {
-        self.subject_uid = subject_uid
-        self.subject = subject
+    init (title: String, created_at: Date) {
         self.title = title
-        self.date = date
+        self.created_at = created_at
     }
     
-    func getNumberOfPages() -> Int {
-        return self.notePages.count
+    func getNumberOfPages() -> Int32{
+        return Int32(self.notePages.count)
+    }
+    
+    
+    func saveNote(to notebook: Notebook) {
+        DataService.shared.saveNewNote(note: self, notebook: notebook)
     }
     
 }

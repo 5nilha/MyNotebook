@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import CoreData
 
 class SubjectsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -20,6 +21,8 @@ class SubjectsViewController: UIViewController {
     var selectedStyle: UIImage!
     var selectedSubject: Notebook!
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
@@ -28,6 +31,15 @@ class SubjectsViewController: UIViewController {
         self.notebookLayoutCollectionView.dataSource = self
         self.notebookLayoutView.isHidden = true
         self.transparentView.isHidden = true
+        
+//        DataService.shared.deleteNotebookRecords()
+        
+        
+//        DataService.shared.getNotebooks()
+        DataService.shared.fetchNotebooksData { (notebooksData) in
+            self.subjects = notebooksData
+            self.collectionView.reloadData()
+        }
     }
 
     @IBAction func addNewSubjectTapped(_ sender: UIBarButtonItem) {
@@ -87,12 +99,14 @@ extension SubjectsViewController: UICollectionViewDataSource, UICollectionViewDe
                     notebook.created_at = Date()
                     notebook.subject = subject.text!
                     notebook.notebookStye = self.selectedStyle
-                    self.subjects.append(notebook)
-                    let indexPath = IndexPath(item: self.subjects.count - 1, section: 0)
+                    DataService.shared.saveNewNotebook(notebook: notebook)
                     
-                    self.collectionView.performBatchUpdates({
-                        self.collectionView?.insertItems(at: [indexPath])
-                    }, completion: nil)
+//                    self.subjects.append(notebook)
+//                    let indexPath = IndexPath(item: self.subjects.count - 1, section: 0)
+//
+//                    self.collectionView.performBatchUpdates({
+//                        self.collectionView?.insertItems(at: [indexPath])
+//                    }, completion: nil)
                     self.notebookLayoutView.isHidden = true
                     self.transparentView.isHidden = true
                 } else {

@@ -53,7 +53,7 @@ class NoteViewController: UIViewController {
     
     func createNewPage() {
         var newPage = Page()
-        newPage.pageNumber = note.getNumberOfPages() + 1
+        newPage.pageNumber = Int32(note.getNumberOfPages() + 1)
         self.note.notePages[newPage.pageNumber] = newPage
         self.page = newPage
     }
@@ -218,7 +218,7 @@ extension NoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             let index = indexPath.row
             
-            let page = note.notePages[index]
+            let page = note.notePages[Int32(index)]
             cell.paperStyle.image = page?.noteImage
            
             return cell

@@ -16,6 +16,7 @@ class NotesViewController: UIViewController {
     var notebook: Notebook!
     var newNote : Note!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -23,6 +24,10 @@ class NotesViewController: UIViewController {
 
         if let notebook = self.notebook {
             navigationItem.title = "\(notebook.subject)"
+            DataService.shared.fetchNotes(notebook: notebook) { (noteData) in
+                self.notebook.notes = noteData
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -36,7 +41,9 @@ class NotesViewController: UIViewController {
         alertView.addButton("Done") {
             
             if title.text != nil && title.text != "" {
-                let note = Note(subject_uid: self.notebook.uid, subject: self.notebook.subject, title: title.text!, date: Date())
+                let note = Note(title: title.text!, created_at: Date())
+                note.saveNote(to: self.notebook)
+                self.notebook.notes.append(note)
                 self.newNote = note
                 
                 self.performSegue(withIdentifier: "goToNewNote", sender: self)

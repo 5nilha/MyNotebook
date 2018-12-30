@@ -8,13 +8,16 @@
 
 import Foundation
 import UIKit
+import CoreData
+
 
 struct Notebook {
     
+    var object: Notebooks!
     var uid: String = ""
     var subject: String = ""
     var created_at: Date = Date()
-    var notebookStye: UIImage!
+    var notebookStye = UIImage(named: "notebook_black")
     var notes = [Note]()
     
 }

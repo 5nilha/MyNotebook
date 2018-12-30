@@ -12,6 +12,8 @@
 		3E0EA8F221D5EAE900318159 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */; };
 		3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F321D5F41700318159 /* CornerView.swift */; };
 		3E0EA8F721D6079000318159 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F621D6079000318159 /* Page.swift */; };
+		3E408EED21D8154800E6028B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E408EEC21D8154800E6028B /* DataService.swift */; };
+		3E408EEF21D81C2300E6028B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E408EEE21D81C2300E6028B /* UIImageExtension.swift */; };
 		3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06221D151F1003BB746 /* AppDelegate.swift */; };
 		3EA2E06521D151F1003BB746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06421D151F1003BB746 /* ViewController.swift */; };
 		3EA2E06821D151F1003BB746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2E06621D151F1003BB746 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E0EA8F321D5F41700318159 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		3E0EA8F621D6079000318159 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		3E408EEC21D8154800E6028B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3E408EEE21D81C2300E6028B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		3EA2E05F21D151F1003BB746 /* MyNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA2E06221D151F1003BB746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA2E06421D151F1003BB746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,14 @@
 			path = Page;
 			sourceTree = "<group>";
 		};
+		3E408EEB21D8151500E6028B /* Persistence DB */ = {
+			isa = PBXGroup;
+			children = (
+				3E408EEC21D8154800E6028B /* DataService.swift */,
+			);
+			path = "Persistence DB";
+			sourceTree = "<group>";
+		};
 		3EA2E05621D151F1003BB746 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 		3EA2E06121D151F1003BB746 /* MyNotebook */ = {
 			isa = PBXGroup;
 			children = (
+				3E408EEB21D8151500E6028B /* Persistence DB */,
 				3EA2E0B521D3DFD8003BB746 /* Properties */,
 				3EA2E0A921D157C2003BB746 /* Controllers */,
 				3EA2E0A621D1576F003BB746 /* View */,
@@ -234,6 +247,7 @@
 			children = (
 				3EA2E09B21D154FC003BB746 /* CGMathExtensions.swift */,
 				3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */,
+				3E408EEE21D81C2300E6028B /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -546,6 +560,7 @@
 				3EA2E09921D15467003BB746 /* StrokeCollection.swift in Sources */,
 				3EA2E09421D153A4003BB746 /* CanvasViewController.swift in Sources */,
 				3EA2E0AB21D199AC003BB746 /* NoteViewController.swift in Sources */,
+				3E408EED21D8154800E6028B /* DataService.swift in Sources */,
 				3EA2E0B921D3E0B6003BB746 /* SubjectsViewController.swift in Sources */,
 				3E0EA8F721D6079000318159 /* Page.swift in Sources */,
 				3EA2E0B721D3E010003BB746 /* CustomFlowLayout.swift in Sources */,
@@ -563,6 +578,7 @@
 				3EA2E0A321D15714003BB746 /* RingControl.swift in Sources */,
 				3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */,
 				3EA2E0B421D3518D003BB746 /* PreviewNoteVC.swift in Sources */,
+				3E408EEF21D81C2300E6028B /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

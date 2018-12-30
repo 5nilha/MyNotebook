@@ -30,7 +30,9 @@ extension PreviewNoteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotePagesCollectionCell", for: indexPath) as! NotePagesCollectionCell
         
-        let page = note.notePages[indexPath.row + 1]
+        let index = indexPath.row + 1
+        
+        let page = note.notePages[Int32(index)]
         
         cell.noteImage.image = page?.noteImage
         cell.pageNumber.text = "\(page?.pageNumber ?? 0)"
