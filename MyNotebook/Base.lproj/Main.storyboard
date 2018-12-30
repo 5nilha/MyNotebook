@@ -1181,6 +1181,7 @@
                     <connections>
                         <outlet property="tableView" destination="0B5-PC-g2k" id="siz-Dx-7ou"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToNewNote" id="jOZ-aU-amB"/>
+                        <segue destination="dub-e8-I6D" kind="show" identifier="goToPagesPreview" id="dcy-m6-Hnm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RI-uF-orD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1204,4 +1205,7 @@
         <image name="shrink" width="64" height="64"/>
         <image name="undo-arrow" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dcy-m6-Hnm"/>
+    </inferredMetricsTieBreakers>
 </document>

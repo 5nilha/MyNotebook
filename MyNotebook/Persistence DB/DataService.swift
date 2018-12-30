@@ -20,9 +20,12 @@ class DataService {
     private func saveData() {
         do {
             try self.persistence.save()
+            
         } catch {
             print(error.localizedDescription)
+            return
         }
+        print("Saved Data")
     }
     
     
@@ -39,14 +42,6 @@ class DataService {
        self.saveData()
     }
     
-    
-//    func getNotebooks () {
-//        let notebooks = try! persistence.fetch(Notebooks.fetchRequest()) as? [Notebooks]
-//        print("Counting notebooks \(notebooks?.count)" )
-//        notebooks?.forEach({ (notebook) in
-//            print("Notebook : \(notebook.subject)")
-//        })
-//    }
     
     // Fetching Notebooks from CoreData
     func fetchNotebooksData(completion: @escaping ([Notebook]) -> ()) {
@@ -107,6 +102,8 @@ class DataService {
         self.saveData()
     }
     
+    
+    //Fetching notes from CoreData
     func fetchNotes(notebook: Notebook, completion: @escaping ([Note]) -> ()) {
         let notebookObject = notebook.object
         print("fetching notes")
@@ -133,19 +130,61 @@ class DataService {
         } else {
             print("notebookObject doesn't exist")
         }
-        
-        
-        
-        
-        
-        
     }
     
+    
+    //MARK:-> -------- PAGES DATA SERVICES---------------
+    
+    //Adding a new Page to CoreData
+    func saveNewPage(page: Page, note: Note) {
+        let pageItem = Pages(context: persistence)
+        pageItem.note_image = page.noteImage.UIImageToData(compressionRatio: 1.0)
+        pageItem.page_number = page.pageNumber
+        note.noteObject.addToPages(pageItem)
+        
+        self.saveData()
+    }
+    
+    
+    //Fetching notes from CoreData
+    func fetchPages(note: Note, completion: @escaping ([Page]) -> ()) {
+        let noteObject = note.noteObject
+        print("fetching pages on \(noteObject?.title)")
+        
+        if let noteObject = noteObject {
+
+            let orderedNoteList: NSMutableOrderedSet = noteObject.mutableOrderedSetValue(forKey: "pages")
+
+            let pagesData = orderedNoteList.array as! [Pages]
+            print("Pages count = \(pagesData.count)")
+
+            var pages = [Page]()
+            for pageData in pagesData {
+
+                let pageNumber = pageData.page_number
+
+                var page = Page()
+                page.pageNumber = pageNumber
+
+                if let pageContent = pageData.note_image {
+                    page.noteImage = UIImage(data: pageContent, scale: 1.0)
+                }
+
+                page.pageObject = pageData
+                pages.append(page)
+            }
+            completion(pages)
+
+        } else {
+            print("notebookObject doesn't exist")
+        }
+    }
     
     
     
     // MARK: Delete Data Records
     
+    //Delete all records
     func deleteNotebookRecords() -> Void {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notebooks")
         
@@ -166,6 +205,7 @@ class DataService {
         }
         
     }
+    
     
 }
 

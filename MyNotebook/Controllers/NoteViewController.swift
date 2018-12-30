@@ -176,6 +176,10 @@ class NoteViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         page.noteImage = image
+        
+        DataService.shared.saveNewPage(page: self.page, note: self.note)
+        
+        
         self.note.notePages[self.page.pageNumber] = page
     }
     

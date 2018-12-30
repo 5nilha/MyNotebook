@@ -11,6 +11,7 @@ import UIKit
 
 struct Page {
     
+    var pageObject: Pages!
     var pageNumber: Int32 = 0
     var noteImage: UIImage!
 }

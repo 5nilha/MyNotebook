@@ -35,7 +35,6 @@ class SubjectsViewController: UIViewController {
 //        DataService.shared.deleteNotebookRecords()
         
         
-//        DataService.shared.getNotebooks()
         DataService.shared.fetchNotebooksData { (notebooksData) in
             self.subjects = notebooksData
             self.collectionView.reloadData()

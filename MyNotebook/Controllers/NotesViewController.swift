@@ -16,6 +16,8 @@ class NotesViewController: UIViewController {
     var notebook: Notebook!
     var newNote : Note!
     
+    var selectedNote: Note!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +60,7 @@ class NotesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToNewNote" {
             let destination = segue.destination as! NoteViewController
-            destination.note = self.newNote
+            destination.note = self.selectedNote
         }
     }
 
@@ -77,6 +79,23 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        
+        self.selectedNote = notebook.notes[index]
+        
+        DataService.shared.fetchPages(note: self.selectedNote) { (pagesData) in
+            for page in pagesData {
+                self.selectedNote.notePages[page.pageNumber] = page
+            }
+
+            if (pagesData.count > 0) {
+                self.performSegue(withIdentifier: "goToPagesPreview", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "goToNewNote", sender: self)
+            }
+        }
+    }
     
 }
 
