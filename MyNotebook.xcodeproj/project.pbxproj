@@ -12,6 +12,7 @@
 		3E0EA8F221D5EAE900318159 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */; };
 		3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F321D5F41700318159 /* CornerView.swift */; };
 		3E0EA8F721D6079000318159 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F621D6079000318159 /* Page.swift */; };
+		3E2BA86221DA987100CE220F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BA86121DA987100CE220F /* DashboardViewController.swift */; };
 		3E408EED21D8154800E6028B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E408EEC21D8154800E6028B /* DataService.swift */; };
 		3E408EEF21D81C2300E6028B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E408EEE21D81C2300E6028B /* UIImageExtension.swift */; };
 		3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06221D151F1003BB746 /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 		3E0EA8F121D5EAE900318159 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		3E0EA8F321D5F41700318159 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		3E0EA8F621D6079000318159 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		3E2BA86121DA987100CE220F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3E408EEC21D8154800E6028B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3E408EEE21D81C2300E6028B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		3EA2E05F21D151F1003BB746 /* MyNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +293,7 @@
 		3EA2E0A921D157C2003BB746 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3EA2E0C921DA9823003BB746 /* Dashboard */,
 				3EA2E09321D153A4003BB746 /* CanvasViewController.swift */,
 				3EA2E06421D151F1003BB746 /* ViewController.swift */,
 				3EA2E0AA21D199AC003BB746 /* NoteViewController.swift */,
@@ -315,6 +318,14 @@
 				3EA2E0B621D3E010003BB746 /* CustomFlowLayout.swift */,
 			);
 			path = Properties;
+			sourceTree = "<group>";
+		};
+		3EA2E0C921DA9823003BB746 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BA86121DA987100CE220F /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		99CD4AE1FD3E7707AE19A5C7 /* Frameworks */ = {
@@ -489,6 +500,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MyNotebook/Pods-MyNotebook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Sketch/Sketch.framework",
 			);
@@ -496,6 +508,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandingMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sketch.framework",
 			);
@@ -572,6 +585,7 @@
 				3EA2E0AD21D2E4C3003BB746 /* CircleView.swift in Sources */,
 				3EA2E0A821D15780003BB746 /* CanvasContainerView.swift in Sources */,
 				3EA2E0AF21D31B52003BB746 /* NotesViewController.swift in Sources */,
+				3E2BA86221DA987100CE220F /* DashboardViewController.swift in Sources */,
 				3EA2E06B21D151F1003BB746 /* MyNotebook.xcdatamodeld in Sources */,
 				3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */,
 				3E0EA8F021D5E8D100318159 /* Notebook.swift in Sources */,

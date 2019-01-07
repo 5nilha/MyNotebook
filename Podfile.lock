@@ -1,20 +1,24 @@
 PODS:
+  - ExpandingMenu (0.4.0)
   - SCLAlertView (0.8)
   - Sketch (2.0)
 
 DEPENDENCIES:
+  - ExpandingMenu
   - SCLAlertView
   - Sketch
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ExpandingMenu
     - SCLAlertView
     - Sketch
 
 SPEC CHECKSUMS:
+  ExpandingMenu: 3187a4ed1aa1aea85418e444c213e4cd6063c122
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   Sketch: c54b898799ba34cb282b57ff42b5d0a6071e855f
 
-PODFILE CHECKSUM: 0b62e0227d8bd9957893f21fcc98307f8b11e69f
+PODFILE CHECKSUM: 36e0194e840c46939be81b42bf65a31b7e535503
 
 COCOAPODS: 1.6.0.beta.2

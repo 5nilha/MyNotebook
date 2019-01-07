@@ -23,7 +23,8 @@ class Note {
     }
     
     func getNumberOfPages() -> Int32{
-        return Int32(self.notePages.count)
+        let count = Int32(self.notePages.count)
+        return count
     }
     
     

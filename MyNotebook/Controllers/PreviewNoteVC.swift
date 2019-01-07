@@ -18,7 +18,7 @@ class PreviewNoteVC: UIViewController {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        print("pages: \(note.notePages.count)")
+//        print("pages: \(note.notePages.count)")
     }
 }
 

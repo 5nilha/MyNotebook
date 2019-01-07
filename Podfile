@@ -8,6 +8,7 @@ target 'MyNotebook' do
   # Pods for MyNotebook
   pod 'Sketch'
   pod 'SCLAlertView'
+  pod 'ExpandingMenu'
 
   target 'MyNotebookTests' do
     inherit! :search_paths
