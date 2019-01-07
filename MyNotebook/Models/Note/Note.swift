@@ -23,13 +23,8 @@ class Note {
     }
     
     func getNumberOfPages() -> Int32{
-        let count = Int32(self.notePages.count)
+        let count = Int32(self.notePages.count) 
         return count
-    }
-    
-    
-    func saveNote(to notebook: Notebook) {
-        DataService.shared.saveNewNote(note: self, notebook: notebook)
     }
     
 }

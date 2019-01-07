@@ -10,36 +10,64 @@ import Foundation
 import UIKit
 import CoreData
 
+typealias NotebookHandler = (Bool, [Notebook]) -> ()
+
+
+
 class DataService {
     
     private init (){}
     static let shared = DataService()
     
+    private var notes = [Notes]()
+    private var pages = [Pages]()
+    
     let persistence: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    private func saveData() {
+    private func saveData(completion: (Error?, Bool) -> ()) {
         do {
             try self.persistence.save()
             
         } catch {
             print(error.localizedDescription)
+            completion(error, false)
             return
         }
         print("Saved Data")
+        completion(nil, true)
     }
     
     
     //MARK:-> -------- NOTEBOOK DATA SERVICES---------------
     
     //Adding a new Notebook to CoreData
-    func saveNewNotebook(notebook: Notebook) {
+    func saveNewNotebook(notebook: Notebook, completion: @escaping NotebookHandler) {
         let newNotebookItem = Notebooks(context: persistence)
         newNotebookItem.subject = notebook.subject
         newNotebookItem.created_at = notebook.created_at
         newNotebookItem.cover = notebook.notebookStye?.UIImageToData(compressionRatio: 1.0)
 //        newNotebookItem.notebook_uid = "\(newNotebookItem.objectID)"
     
-       self.saveData()
+        self.saveData { (error, wasSaved) in
+            if error != nil {
+                saveNewNotebook(notebook: notebook, completion: { (isSave, notebooks) in
+                    completion(true, notebooks)
+                })
+                return
+            }
+            else {
+                if wasSaved {
+                    fetchNotebooksData(completion: { (notebooks) in
+                        completion(true, notebooks)
+                    })
+                } else {
+                    let notebooksData = [Notebook]()
+                    completion(true, notebooksData)
+                }
+            }
+        }
+        
+        
     }
     
     
@@ -91,7 +119,7 @@ class DataService {
     //MARK:-> -------- NOTES DATA SERVICES---------------
     
     //Adding a new Note to CoreData
-    func  saveNewNote(note: Note, notebook: Notebook) {
+    func  saveNewNote(note: Note, notebook: Notebook, completion: @escaping ([Note]) -> ()) {
         
         let newNoteItem = Notes(context: persistence)
         newNoteItem.created_at = note.created_at
@@ -99,7 +127,25 @@ class DataService {
         newNoteItem.number_of_pages = note.getNumberOfPages()
         notebook.object.addToNotes(newNoteItem)
         
-        self.saveData()
+        self.saveData { (error, wasSaved) in
+            if error != nil {
+                saveNewNote(note: note, notebook: notebook, completion: { (notes) in
+                    completion(notes)
+                })
+                return
+            }
+            else {
+                if wasSaved {
+                    self.fetchNotes(notebook: notebook, completion: { (notes) in
+                        completion(notes)
+                    })
+                }
+                else {
+                    let notesData = [Note]()
+                    completion(notesData)
+                }
+            }
+        }
     }
     
     
@@ -133,16 +179,39 @@ class DataService {
     }
     
     
+//    private func noteExist() -> Notes {
+//        let request: NSFetchRequest<Notes> = Notes.fetchRequest()
+//        request.predicate = NSPredicate(format: "type = !@", )
+//    }
+    
+    
     //MARK:-> -------- PAGES DATA SERVICES---------------
     
     //Adding a new Page to CoreData
-    func saveNewPage(page: Page, note: Note) {
+    func saveNewPage(page: Page, note: Note, completion: @escaping ([Page]) -> ()) {
         let pageItem = Pages(context: persistence)
         pageItem.note_image = page.noteImage.UIImageToData(compressionRatio: 1.0)
         pageItem.page_number = page.pageNumber
         note.noteObject.addToPages(pageItem)
         
-        self.saveData()
+        self.saveData { (error, wasSaved) in
+            if error != nil {
+                saveNewPage(page: page, note: note, completion: { (pages) in
+                    completion(pages)
+                })
+            }
+            else {
+                if wasSaved {
+                    self.fetchPages(note: note, completion: { (pages) in
+                        completion(pages)
+                    })
+                }
+                else {
+                    let pagesData = [Page]()
+                    completion(pagesData)
+                }
+            }
+        }
     }
     
     

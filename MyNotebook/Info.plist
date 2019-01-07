@@ -22,6 +22,10 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app should access the library to save the note page</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app should access the library to save the note page</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

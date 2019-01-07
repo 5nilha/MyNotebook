@@ -98,7 +98,12 @@ extension SubjectsViewController: UICollectionViewDataSource, UICollectionViewDe
                     notebook.created_at = Date()
                     notebook.subject = subject.text!
                     notebook.notebookStye = self.selectedStyle
-                    DataService.shared.saveNewNotebook(notebook: notebook)
+                    DataService.shared.saveNewNotebook(notebook: notebook, completion: { (isSaved, notebooks) in
+                        if isSaved {
+                            self.subjects = notebooks
+                            self.collectionView.reloadData()
+                        }
+                    })
                     
 //                    self.subjects.append(notebook)
 //                    let indexPath = IndexPath(item: self.subjects.count - 1, section: 0)

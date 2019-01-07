@@ -45,7 +45,8 @@ class NoteViewController: UIViewController {
     var papersName = ["Blank", "Notebook", "Squared"]
     var paperSelected : UIImage?
     var note: Note!
-    var page: Page!
+    var page = Page()
+    var sourceVC = "New Note"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -167,11 +168,15 @@ class NoteViewController: UIViewController {
         
         page.noteImage = image
         
-        DataService.shared.saveNewPage(page: self.page, note: self.note)
-        
-        
-        self.note.notePages[self.page.pageNumber] = page
+        DataService.shared.saveNewPage(page: self.page, note: self.note) { (pages) in
+            self.note.notePages[self.page.pageNumber] = self.page
+        }
     }
+    
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToPreview" {

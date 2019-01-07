@@ -913,7 +913,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Note" id="bM2-2f-ZiT">
                         <leftBarButtonItems>
-                            <barButtonItem title="Item" id="eKw-ab-AgI"/>
+                            <barButtonItem title="Back" id="eKw-ab-AgI">
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="Er4-fi-T7j"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="add-file-interface-symbol-of-paper-sheet-with-text-lines-and-plus-sign" id="o4r-Im-qFq">
                                 <connections>
                                     <action selector="newFileButtonTapped:" destination="BYZ-38-t0r" id="N4r-hB-xDx"/>
@@ -1002,9 +1006,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1303.5971223021584" y="-961.3065326633166"/>
+            <point key="canvasLocation" x="1510" y="-1339"/>
         </scene>
-        <!--Preview NoteVC-->
+        <!--Note Pages-->
         <scene sceneID="Eba-yW-uhH">
             <objects>
                 <viewController id="dub-e8-I6D" customClass="PreviewNoteVC" customModule="MyNotebook" customModuleProvider="target" sceneMemberID="viewController">
@@ -1096,13 +1100,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7ku-8q-sZL"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Note Pages" id="yhM-5w-DF6">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="DBL-lq-0S7">
+                                <connections>
+                                    <action selector="addNewPage:" destination="dub-e8-I6D" id="CU3-5G-LbS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="udp-k4-3uh">
+                                <connections>
+                                    <action selector="sharePage:" destination="dub-e8-I6D" id="hZ7-HK-F6W"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="bIZ-2k-WZ9" id="cQ5-DR-2pg"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToNewPage" id="GkL-II-NqB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3X-dJ-3ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2340.2877697841727" y="-813.0653266331658"/>
+            <point key="canvasLocation" x="2194" y="-498"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KyT-Xx-jHP">
@@ -1765,5 +1784,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="m08-up-qDj"/>
+        <segue reference="jOZ-aU-amB"/>
     </inferredMetricsTieBreakers>
 </document>

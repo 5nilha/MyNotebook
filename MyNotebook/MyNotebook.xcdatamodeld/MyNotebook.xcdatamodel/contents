@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Notebooks" representedClassName="Notebooks" syncable="YES" codeGenerationType="class">
+    <entity name="Notebooks" representedClassName="Notebooks" syncable="YES">
         <attribute name="cover" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="notebook_uid" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,7 +8,7 @@
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Notes" inverseName="notebooks" inverseEntity="Notes" syncable="YES"/>
     </entity>
-    <entity name="Notes" representedClassName="Notes" syncable="YES" codeGenerationType="class">
+    <entity name="Notes" representedClassName="Notes" syncable="YES">
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_bookmarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -18,14 +18,14 @@
         <relationship name="notebooks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notebooks" inverseName="notes" inverseEntity="Notebooks" syncable="YES"/>
         <relationship name="pages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pages" inverseName="notes" inverseEntity="Pages" syncable="YES"/>
     </entity>
-    <entity name="Pages" representedClassName="Pages" syncable="YES" codeGenerationType="class">
+    <entity name="Pages" representedClassName="Pages" syncable="YES">
         <attribute name="note_image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="page_number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notes" inverseName="pages" inverseEntity="Notes" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Notebooks" positionX="-148.36328125" positionY="-157.015625" width="128" height="133"/>
+        <element name="Notebooks" positionX="-148.36328125" positionY="-157.015625" width="128" height="135"/>
         <element name="Notes" positionX="-483.36328125" positionY="24.78515625" width="128" height="165"/>
-        <element name="Pages" positionX="-138.4765625" positionY="356" width="128" height="88"/>
+        <element name="Pages" positionX="-138.4765625" positionY="356" width="128" height="90"/>
     </elements>
 </model>

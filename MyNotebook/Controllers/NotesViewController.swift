@@ -44,11 +44,13 @@ class NotesViewController: UIViewController {
             
             if title.text != nil && title.text != "" {
                 let note = Note(title: title.text!, created_at: Date())
-                note.saveNote(to: self.notebook)
-                self.notebook.notes.append(note)
                 self.newNote = note
-                
-                self.performSegue(withIdentifier: "goToNewNote", sender: self)
+                DataService.shared.saveNewNote(note: note, notebook: self.notebook, completion: { (notes) in
+                    self.notebook.notes = notes
+                    self.tableView.reloadData()
+                    //                self.performSegue(withIdentifier: "goToNewNote", sender: self)
+                })
+
             }
             
             alertView.dismiss(animated: true, completion: nil)
@@ -61,6 +63,12 @@ class NotesViewController: UIViewController {
         if segue.identifier == "goToNewNote" {
             let destination = segue.destination as! NoteViewController
             destination.note = self.selectedNote
+            destination.sourceVC = "Notes"
+        }
+        if segue.identifier == "goToPagesPreview" {
+            let destination = segue.destination as! PreviewNoteVC
+            destination.note = self.selectedNote
+            destination.sourceVC = "Notes"
         }
     }
 

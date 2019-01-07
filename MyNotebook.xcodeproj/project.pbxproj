@@ -13,6 +13,12 @@
 		3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F321D5F41700318159 /* CornerView.swift */; };
 		3E0EA8F721D6079000318159 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EA8F621D6079000318159 /* Page.swift */; };
 		3E2BA86221DA987100CE220F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BA86121DA987100CE220F /* DashboardViewController.swift */; };
+		3E2CE30A21E2F33C008B27D2 /* Pages+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CE30421E2F33C008B27D2 /* Pages+CoreDataClass.swift */; };
+		3E2CE30B21E2F33C008B27D2 /* Pages+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CE30521E2F33C008B27D2 /* Pages+CoreDataProperties.swift */; };
+		3E2CE30C21E2F33C008B27D2 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CE30621E2F33C008B27D2 /* Notes+CoreDataClass.swift */; };
+		3E2CE30D21E2F33C008B27D2 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CE30721E2F33C008B27D2 /* Notes+CoreDataProperties.swift */; };
+		3E2CE30E21E2F33C008B27D2 /* Notebooks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CE30821E2F33C008B27D2 /* Notebooks+CoreDataClass.swift */; };
+		3E2CE30F21E2F33C008B27D2 /* Notebooks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CE30921E2F33C008B27D2 /* Notebooks+CoreDataProperties.swift */; };
 		3E408EED21D8154800E6028B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E408EEC21D8154800E6028B /* DataService.swift */; };
 		3E408EEF21D81C2300E6028B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E408EEE21D81C2300E6028B /* UIImageExtension.swift */; };
 		3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2E06221D151F1003BB746 /* AppDelegate.swift */; };
@@ -70,6 +76,12 @@
 		3E0EA8F321D5F41700318159 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		3E0EA8F621D6079000318159 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		3E2BA86121DA987100CE220F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		3E2CE30421E2F33C008B27D2 /* Pages+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pages+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3E2CE30521E2F33C008B27D2 /* Pages+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pages+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E2CE30621E2F33C008B27D2 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3E2CE30721E2F33C008B27D2 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3E2CE30821E2F33C008B27D2 /* Notebooks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notebooks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3E2CE30921E2F33C008B27D2 /* Notebooks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notebooks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3E408EEC21D8154800E6028B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3E408EEE21D81C2300E6028B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		3EA2E05F21D151F1003BB746 /* MyNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +163,8 @@
 		3E0EA8EE21D5E8B900318159 /* Notebook */ = {
 			isa = PBXGroup;
 			children = (
+				3E2CE30821E2F33C008B27D2 /* Notebooks+CoreDataClass.swift */,
+				3E2CE30921E2F33C008B27D2 /* Notebooks+CoreDataProperties.swift */,
 				3E0EA8EF21D5E8D100318159 /* Notebook.swift */,
 			);
 			path = Notebook;
@@ -160,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				3E0EA8F621D6079000318159 /* Page.swift */,
+				3E2CE30421E2F33C008B27D2 /* Pages+CoreDataClass.swift */,
+				3E2CE30521E2F33C008B27D2 /* Pages+CoreDataProperties.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -307,6 +323,8 @@
 		3EA2E0B021D31B6F003BB746 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				3E2CE30621E2F33C008B27D2 /* Notes+CoreDataClass.swift */,
+				3E2CE30721E2F33C008B27D2 /* Notes+CoreDataProperties.swift */,
 				3EA2E0B121D31B84003BB746 /* Note.swift */,
 			);
 			path = Note;
@@ -572,10 +590,13 @@
 				3EA2E09721D1542C003BB746 /* StrokeGestureRecognizer.swift in Sources */,
 				3EA2E09921D15467003BB746 /* StrokeCollection.swift in Sources */,
 				3EA2E09421D153A4003BB746 /* CanvasViewController.swift in Sources */,
+				3E2CE30B21E2F33C008B27D2 /* Pages+CoreDataProperties.swift in Sources */,
+				3E2CE30F21E2F33C008B27D2 /* Notebooks+CoreDataProperties.swift in Sources */,
 				3EA2E0AB21D199AC003BB746 /* NoteViewController.swift in Sources */,
 				3E408EED21D8154800E6028B /* DataService.swift in Sources */,
 				3EA2E0B921D3E0B6003BB746 /* SubjectsViewController.swift in Sources */,
 				3E0EA8F721D6079000318159 /* Page.swift in Sources */,
+				3E2CE30C21E2F33C008B27D2 /* Notes+CoreDataClass.swift in Sources */,
 				3EA2E0B721D3E010003BB746 /* CustomFlowLayout.swift in Sources */,
 				3EA2E0B221D31B84003BB746 /* Note.swift in Sources */,
 				3E0EA8F221D5EAE900318159 /* ViewControllerExtension.swift in Sources */,
@@ -586,10 +607,13 @@
 				3EA2E0A821D15780003BB746 /* CanvasContainerView.swift in Sources */,
 				3EA2E0AF21D31B52003BB746 /* NotesViewController.swift in Sources */,
 				3E2BA86221DA987100CE220F /* DashboardViewController.swift in Sources */,
+				3E2CE30D21E2F33C008B27D2 /* Notes+CoreDataProperties.swift in Sources */,
 				3EA2E06B21D151F1003BB746 /* MyNotebook.xcdatamodeld in Sources */,
 				3E0EA8F421D5F41700318159 /* CornerView.swift in Sources */,
 				3E0EA8F021D5E8D100318159 /* Notebook.swift in Sources */,
+				3E2CE30E21E2F33C008B27D2 /* Notebooks+CoreDataClass.swift in Sources */,
 				3EA2E0A321D15714003BB746 /* RingControl.swift in Sources */,
+				3E2CE30A21E2F33C008B27D2 /* Pages+CoreDataClass.swift in Sources */,
 				3EA2E06321D151F1003BB746 /* AppDelegate.swift in Sources */,
 				3EA2E0B421D3518D003BB746 /* PreviewNoteVC.swift in Sources */,
 				3E408EEF21D81C2300E6028B /* UIImageExtension.swift in Sources */,
